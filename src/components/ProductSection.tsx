@@ -1,27 +1,33 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Cog, Settings, Zap } from "lucide-react";
+import { Cog, Settings, Zap, Factory, FlaskConical, Shield } from "lucide-react";
 
 const ProductSection = () => {
-  const products = [
+  const mainProducts = [
     {
-      icon: <Cog className="w-8 h-8 text-primary" />,
-      title: "Заготовки лопаток",
-      description: "Штампованные заготовки лопаток для газотурбинных двигателей из жаропрочных сплавов",
-      features: ["До 18 кг", "Габариты 470×250×200", "Высокая точность"]
+      title: "Штампованные заготовки лопаток",
+      description: "для газотурбинных двигателей",
+      details: "Высокоточные заготовки из жаропрочных сплавов"
     },
     {
-      icon: <Settings className="w-8 h-8 text-primary" />,
-      title: "Сложные штамповки",
-      description: "Клапана, форсунки, фланцы, рычаги, эндопротезы и другие изделия любой сложности",
-      features: ["Любая сложность", "Индивидуальный подход", "Качественные материалы"]
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-primary" />,
-      title: "Технологические процессы",
-      description: "Разработка технологических процессов и оснастки для горячей штамповки",
-      features: ["Полный цикл", "Современные технологии", "Инновационные решения"]
+      title: "Штамповки любой сложности",
+      description: "весом до 18 кг и габаритами 750 x 300 x 200",
+      details: "Включая клапаны, форсунки, фланцы, рычаги, эндопротезы и т.д."
     }
+  ];
+
+  const materials = [
+    "Тяжелодеформируемые никельсодержащие сплавы",
+    "Нержавеющие стали", 
+    "Титан и другие материалы отечественного и импортного производства"
+  ];
+
+  const facilities = [
+    { icon: <Factory className="w-6 h-6" />, name: "кузнечно-штамповочный цех" },
+    { icon: <Settings className="w-6 h-6" />, name: "цех подготовки производства" },
+    { icon: <Shield className="w-6 h-6" />, name: "участок контроля качества заготовок" },
+    { icon: <Cog className="w-6 h-6" />, name: "конструкторское бюро" },
+    { icon: <FlaskConical className="w-6 h-6" />, name: "аккредитованная лаборатория разрушающего контроля" }
   ];
 
   return (
@@ -29,69 +35,85 @@ const ProductSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Основная продукция
+            Производство
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Высококачественные изделия для авиационной и промышленной отраслей
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            ООО «АРТОМ» занимается изготовлением штампованных заготовок лопаток для газотурбинных двигателей 
+            на кривошипных прессах из сталей и жаропрочных сплавов, а также разработкой технологических 
+            процессов и оснастки для горячей штамповки заготовок лопаток.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {products.map((product, index) => (
-            <Card 
-              key={index} 
-              className="group hover:shadow-elegant transition-spring hover:-translate-y-2 border-border/50 bg-card/80 backdrop-blur-sm animate-slide-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center shadow-elegant group-hover:animate-glow">
-                  {product.icon}
+        {/* Main Products */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <Card className="bg-card/80 backdrop-blur-sm border-border/50 hover:shadow-elegant transition-spring animate-slide-in">
+            <CardHeader>
+              <div className="flex items-center space-x-3 mb-3">
+                <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-elegant">
+                  <Cog className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <CardTitle className="text-xl font-bold text-foreground">
-                  {product.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {product.description}
-                </CardDescription>
-                <div className="flex flex-wrap gap-2">
-                  {product.features.map((feature, featureIndex) => (
-                    <Badge 
-                      key={featureIndex} 
-                      variant="secondary" 
-                      className="text-xs bg-accent text-accent-foreground"
-                    >
-                      {feature}
-                    </Badge>
-                  ))}
+                <div>
+                  <CardTitle className="text-xl text-primary font-bold">ОСНОВНАЯ ПРОДУКЦИЯ:</CardTitle>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {mainProducts.map((product, index) => (
+                <div key={index} className="p-4 rounded-lg bg-gradient-subtle border border-border/30">
+                  <h4 className="font-semibold text-foreground mb-1">{product.title}</h4>
+                  <p className="text-primary font-medium mb-2">{product.description}</p>
+                  <p className="text-sm text-muted-foreground">{product.details}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card/80 backdrop-blur-sm border-border/50 hover:shadow-elegant transition-spring animate-slide-in" style={{ animationDelay: '0.1s' }}>
+            <CardHeader>
+              <div className="flex items-center space-x-3 mb-3">
+                <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-elegant">
+                  <Settings className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <div>
+                  <CardTitle className="text-xl text-primary font-bold">ИСПОЛЬЗУЕМЫЕ МАТЕРИАЛЫ:</CardTitle>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {materials.map((material, index) => (
+                <div key={index} className="flex items-start space-x-3 p-3 rounded-lg bg-gradient-subtle border border-border/30">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-foreground font-medium">{material}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
         </div>
 
-        {/* Materials Section */}
-        <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-8 shadow-card border border-border/50 animate-fade-in">
-          <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Используемые материалы
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              "Никельсодержащие сплавы",
-              "Нержавеющие стали", 
-              "Титан",
-              "Импортные материалы"
-            ].map((material, index) => (
-              <div 
-                key={index}
-                className="text-center p-4 rounded-lg bg-gradient-subtle border border-border/30 hover:shadow-card transition-smooth"
-              >
-                <p className="font-medium text-foreground">{material}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Production Facilities */}
+        <Card className="bg-card/80 backdrop-blur-sm border-border/50 hover:shadow-elegant transition-spring animate-fade-in">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl text-primary font-bold mb-2">СОБСТВЕННАЯ ПРОИЗВОДСТВЕННАЯ БАЗА:</CardTitle>
+            <CardDescription className="text-muted-foreground">
+              Полный технологический цикл производства высококачественных изделий
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {facilities.map((facility, index) => (
+                <div 
+                  key={index}
+                  className="flex items-center space-x-3 p-4 rounded-lg bg-gradient-subtle border border-border/30 hover:shadow-card transition-smooth"
+                >
+                  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-foreground">
+                    {facility.icon}
+                  </div>
+                  <p className="font-medium text-foreground capitalize leading-tight">{facility.name}</p>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
