@@ -34,9 +34,13 @@ const ProductSection = () => {
     <section id="production" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Производство
-          </h2>
+          <div className="mb-4">
+            <img 
+              src="/lovable-uploads/f8efc78e-8aa7-41f2-96af-f1014dbe2df0.png" 
+              alt="Производство АРТОМ" 
+              className="mx-auto max-w-md h-auto rounded-lg shadow-elegant"
+            />
+          </div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             ООО «АРТОМ» занимается изготовлением штампованных заготовок лопаток для газотурбинных двигателей 
             на кривошипных прессах из сталей и жаропрочных сплавов, а также разработкой технологических 
@@ -93,7 +97,7 @@ const ProductSection = () => {
         {/* Production Facilities */}
         <Card className="bg-card/80 backdrop-blur-sm border-border/50 hover:shadow-elegant transition-spring animate-fade-in">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl text-primary font-bold mb-2">СОБСТВЕННАЯ ПРОИЗВОДСТВЕННАЯ БАЗА:</CardTitle>
+            <CardTitle className="text-2xl text-primary font-bold mb-2">Собственная производственная база</CardTitle>
             <CardDescription className="text-muted-foreground">
               Полный технологический цикл производства высококачественных изделий
             </CardDescription>

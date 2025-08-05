@@ -24,10 +24,13 @@ const HeroSection = () => {
             <span className="block">Заготовок</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            ООО «АРТОМ» — ведущий производитель штампованных заготовок лопаток для газотурбинных двигателей 
-            из сталей и жаропрочных сплавов
-          </p>
+          <div className="mb-8 max-w-2xl mx-auto">
+            <img 
+              src="/lovable-uploads/f8efc78e-8aa7-41f2-96af-f1014dbe2df0.png" 
+              alt="Производственная база АРТОМ" 
+              className="w-full h-auto rounded-lg shadow-elegant"
+            />
+          </div>
 
           <div className="flex justify-center">
             <Button 

@@ -20,8 +20,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center shadow-elegant">
-              <span className="text-primary-foreground font-bold text-lg">A</span>
+            <div className="w-12 h-12 flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/da280e82-2fe2-4700-aa83-9d1bc498c5bb.png" 
+                alt="АРТОМ логотип" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">АРТОМ</h1>
