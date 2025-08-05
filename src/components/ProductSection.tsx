@@ -34,13 +34,9 @@ const ProductSection = () => {
     <section id="production" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <div className="mb-4">
-            <img 
-              src="/lovable-uploads/f8efc78e-8aa7-41f2-96af-f1014dbe2df0.png" 
-              alt="Производство АРТОМ" 
-              className="mx-auto max-w-md h-auto rounded-lg shadow-elegant"
-            />
-          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Производство
+          </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             ООО «АРТОМ» занимается изготовлением штампованных заготовок лопаток для газотурбинных двигателей 
             на кривошипных прессах из сталей и жаропрочных сплавов, а также разработкой технологических 
