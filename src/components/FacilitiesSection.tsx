@@ -76,7 +76,7 @@ const FacilitiesSection = () => {
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
           {[
-            { number: "25+", label: "Лет опыта" },
+            { number: "30", label: "лет опыта" },
             { number: "18кг", label: "Максимальный вес изделий" },
             { number: "100%", label: "Контроль качества" }
           ].map((stat, index) => (

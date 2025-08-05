@@ -22,7 +22,7 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 flex items-center justify-center">
               <img 
-                src="/lovable-uploads/da280e82-2fe2-4700-aa83-9d1bc498c5bb.png" 
+                src="/lovable-uploads/8698ce12-657f-4f19-9f64-2a90b3e9926b.png" 
                 alt="АРТОМ логотип" 
                 className="w-full h-full object-contain"
               />
