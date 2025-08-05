@@ -50,19 +50,23 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-4">Быстрые ссылки</h4>
             <div className="grid grid-cols-2 gap-2">
               {[
-                "Главная",
-                "Производство", 
-                "Руководство",
-                "Контакты",
-                "Мы в СМИ",
-                "Награды"
+                { name: "Главная", href: "#home" },
+                { name: "Производство", href: "#production" }, 
+                { name: "Руководство", href: "#management" },
+                { name: "Контакты", href: "#contacts" },
+                { name: "Мы в СМИ", href: "#media" },
+                { name: "Награды", href: "#awards" }
               ].map((link, index) => (
                 <Button 
                   key={index}
                   variant="ghost" 
                   className="justify-start text-white/80 hover:text-white hover:bg-white/10 p-2 h-auto"
+                  onClick={() => {
+                    const element = document.querySelector(link.href);
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
-                  {link}
+                  {link.name}
                 </Button>
               ))}
             </div>
