@@ -89,7 +89,7 @@ const AwardsSection = () => {
           {[
             { number: "2024", label: "Год признания лидером отрасли" },
             { number: "№1", label: "В рейтинге предприятий отрасли" },
-            { number: "25+", label: "Лет безупречной работы" }
+            { number: "30", label: "лет безупречной работы" }
           ].map((stat, index) => (
             <div key={index} className="text-center p-6 rounded-xl bg-gradient-subtle border border-border/30 hover:shadow-card transition-smooth">
               <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>

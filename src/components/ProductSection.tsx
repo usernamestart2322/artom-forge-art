@@ -90,30 +90,6 @@ const ProductSection = () => {
           </Card>
         </div>
 
-        {/* Production Facilities */}
-        <Card className="bg-card/80 backdrop-blur-sm border-border/50 hover:shadow-elegant transition-spring animate-fade-in">
-          <CardHeader className="text-center">
-            <CardTitle className="text-2xl text-primary font-bold mb-2">Собственная производственная база</CardTitle>
-            <CardDescription className="text-muted-foreground">
-              Полный технологический цикл производства высококачественных изделий
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {facilities.map((facility, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center space-x-3 p-4 rounded-lg bg-gradient-subtle border border-border/30 hover:shadow-card transition-smooth"
-                >
-                  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-foreground">
-                    {facility.icon}
-                  </div>
-                  <p className="font-medium text-foreground capitalize leading-tight">{facility.name}</p>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );
