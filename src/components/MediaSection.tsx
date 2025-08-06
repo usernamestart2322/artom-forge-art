@@ -1,11 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, ExternalLink, Newspaper, Play } from "lucide-react";
-import { useState } from "react";
+import { Calendar, ExternalLink, Newspaper } from "lucide-react";
 
 const MediaSection = () => {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const mediaItems = [
     {
       title: "АРТОМ получил звание 'Лидер отрасли 2024'",
@@ -60,42 +58,6 @@ const MediaSection = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Освещение деятельности компании АРТОМ в профессиональных и отраслевых изданиях
           </p>
-        </div>
-
-        {/* Featured Video Section */}
-        <div className="mb-16 max-w-4xl mx-auto">
-          <Card className="overflow-hidden border-border/50 bg-card/80 backdrop-blur-sm">
-            <CardContent className="p-0">
-              {!isVideoPlaying ? (
-                <div className="relative group cursor-pointer" onClick={() => setIsVideoPlaying(true)}>
-                  <div className="aspect-video bg-gradient-subtle flex items-center justify-center">
-                    <div className="text-center space-y-4">
-                      <div className="w-20 h-20 mx-auto bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-smooth">
-                        <Play className="w-8 h-8 text-primary ml-1" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-foreground mb-2">О компании АРТОМ</h3>
-                        <p className="text-muted-foreground">Видеопрезентация нашего производства и технологий</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-smooth"></div>
-                </div>
-              ) : (
-                <div className="aspect-video">
-                  <iframe
-                    src="https://rutube.ru/play/embed/3ab7817a88a867fe37dd794261158b7c"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    allow="fullscreen"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
-              )}
-            </CardContent>
-          </Card>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">

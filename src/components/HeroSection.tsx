@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 import heroImage from "@/assets/hero-manufacturing.jpg";
 
 const HeroSection = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -30,12 +33,29 @@ const HeroSection = () => {
           </p>
 
           <div className="flex justify-center">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-4 text-lg font-semibold shadow-glow transition-spring hover:scale-105"
-            >
-              Наша продукция
-            </Button>
+            <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+              <DialogTrigger asChild>
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-4 text-lg font-semibold shadow-glow transition-spring hover:scale-105"
+                >
+                  Наша продукция
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl w-full p-0">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://rutube.ru/play/embed/3ab7817a88a867fe37dd794261158b7c"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allow="fullscreen"
+                    allowFullScreen
+                    className="w-full h-full rounded-lg"
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
 
