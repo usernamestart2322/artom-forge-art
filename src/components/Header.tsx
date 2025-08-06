@@ -18,20 +18,29 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border shadow-card">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 flex items-center justify-center">
-              <img 
-                src="/lovable-uploads/8698ce12-657f-4f19-9f64-2a90b3e9926b.png" 
-                alt="АРТОМ логотип" 
-                className="w-full h-full object-contain"
-              />
+          {/* Logo and Contact Info */}
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/8698ce12-657f-4f19-9f64-2a90b3e9926b.png" 
+                  alt="АРТОМ логотип" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold text-foreground">АРТОМ</h1>
+                <p className="text-xs text-muted-foreground leading-tight">
+                  Производство заготовок лопаток
+                </p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-foreground">АРТОМ</h1>
-              <p className="text-xs text-muted-foreground leading-tight">
-                Производство заготовок лопаток
-              </p>
+            
+            {/* Contact Info */}
+            <div className="hidden xl:block text-xs text-muted-foreground space-y-1">
+              <div>Россия, город Омск</div>
+              <div>ул. Богдана Хмельницкого 188, кв. 2</div>
+              <div>ooo.artom@mail.ru | http://artom55.ru</div>
             </div>
           </div>
 

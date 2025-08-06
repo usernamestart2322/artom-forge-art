@@ -9,8 +9,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shadow-glow">
-                <span className="text-primary-foreground font-bold text-xl">A</span>
+              <div className="w-12 h-12 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/8698ce12-657f-4f19-9f64-2a90b3e9926b.png" 
+                  alt="АРТОМ логотип" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <h3 className="text-2xl font-bold">АРТОМ</h3>
@@ -27,20 +31,19 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-xl font-semibold mb-4">Контактная информация</h4>
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary-light" />
-                <span className="text-white/90">+7 (XXX) XXX-XX-XX</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary-light" />
-                <span className="text-white/90">info@artom.ru</span>
-              </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary-light mt-1" />
                 <span className="text-white/90">
-                  Россия, г. [Город]<br />
-                  ул. [Адрес производства]
+                  Россия, город Омск<br />
+                  ул. Богдана Хмельницкого 188, кв. 2
                 </span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-primary-light" />
+                <span className="text-white/90">ooo.artom@mail.ru</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <span className="text-white/90">http://artom55.ru</span>
               </div>
             </div>
           </div>
