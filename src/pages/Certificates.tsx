@@ -62,7 +62,7 @@ const Certificates = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto justify-items-center">
               {certificates.map((cert, index) => <Card key={index} className="group hover:shadow-elegant transition-spring hover:-translate-y-2 border-border/50 bg-card/80 backdrop-blur-sm animate-slide-in" style={{
               animationDelay: `${index * 0.2}s`
             }}>
