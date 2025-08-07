@@ -3,55 +3,54 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Award, FileCheck } from "lucide-react";
-
 const Certificates = () => {
-  const certificates = [
-    {
-      image: "/lovable-uploads/92a9e000-b8d1-4d3b-a788-3f4a1df8c7ee.png",
-      title: "Сертификат соответствия СДС ВС 01.2160-2024",
-      description: "Система менеджмента качества на ковку, прессование, штамповку, профилирование, изготовление изделий методом порошковой металлургии",
-      validUntil: "01 ноября 2027 г.",
-      standard: "ГОСТ Р ИСО 9001-2015 (ISO 9001:2015)",
-      category: "Качество"
-    },
-    {
-      image: "/lovable-uploads/67fca0c0-0674-4fed-a3a4-dbf7f3f18fbe.png", 
-      title: "Свидетельство об аккредитации испытательной лаборатории",
-      description: "Лаборатория разрушающих и неразрушающих видов испытаний ООО «Артом»",
-      validUntil: "08 ноября 2028 г.",
-      standard: "ГОСТ ИСО/МЭК 17025-2019",
-      category: "Аккредитация"
-    },
-    {
-      image: "/lovable-uploads/43b977b8-3ce6-450e-aaf5-e4d88a73bb28.png",
-      title: "Национальный сертификат - Лидер отрасли России 2020",
-      description: "За весомый вклад в развитие российской экономики, добросовестную уплату налогов, достижение высоких экономических показателей",
-      validUntil: "Бессрочно",
-      standard: "ОКВЭД 25.50",
-      category: "Национальное признание"
-    }
-  ];
-
+  const certificates = [{
+    image: "/lovable-uploads/92a9e000-b8d1-4d3b-a788-3f4a1df8c7ee.png",
+    title: "Сертификат соответствия СДС ВС 01.2160-2024",
+    description: "Система менеджмента качества на ковку, прессование, штамповку, профилирование, изготовление изделий методом порошковой металлургии",
+    validUntil: "01 ноября 2027 г.",
+    standard: "ГОСТ Р ИСО 9001-2015 (ISO 9001:2015)",
+    category: "Качество"
+  }, {
+    image: "/lovable-uploads/67fca0c0-0674-4fed-a3a4-dbf7f3f18fbe.png",
+    title: "Свидетельство об аккредитации испытательной лаборатории",
+    description: "Лаборатория разрушающих и неразрушающих видов испытаний ООО «Артом»",
+    validUntil: "08 ноября 2028 г.",
+    standard: "ГОСТ ИСО/МЭК 17025-2019",
+    category: "Аккредитация"
+  }, {
+    image: "/lovable-uploads/43b977b8-3ce6-450e-aaf5-e4d88a73bb28.png",
+    title: "Национальный сертификат - Лидер отрасли России 2020",
+    description: "За весомый вклад в развитие российской экономики, добросовестную уплату налогов, достижение высоких экономических показателей",
+    validUntil: "Бессрочно",
+    standard: "ОКВЭД 25.50",
+    category: "Национальное признание"
+  }];
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case "Качество": return "bg-primary text-primary-foreground";
-      case "Аккредитация": return "bg-blue-500 text-white";
-      case "Национальное признание": return "bg-green-500 text-white";
-      default: return "bg-secondary text-secondary-foreground";
+      case "Качество":
+        return "bg-primary text-primary-foreground";
+      case "Аккредитация":
+        return "bg-blue-500 text-white";
+      case "Национальное признание":
+        return "bg-green-500 text-white";
+      default:
+        return "bg-secondary text-secondary-foreground";
     }
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case "Качество": return <Shield className="w-6 h-6" />;
-      case "Аккредитация": return <FileCheck className="w-6 h-6" />;
-      case "Национальное признание": return <Award className="w-6 h-6" />;
-      default: return <Shield className="w-6 h-6" />;
+      case "Качество":
+        return <Shield className="w-6 h-6" />;
+      case "Аккредитация":
+        return <FileCheck className="w-6 h-6" />;
+      case "Национальное признание":
+        return <Award className="w-6 h-6" />;
+      default:
+        return <Shield className="w-6 h-6" />;
     }
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       <main className="pt-24">
@@ -71,20 +70,12 @@ const Certificates = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {certificates.map((cert, index) => (
-                <Card 
-                  key={index}
-                  className="group hover:shadow-elegant transition-spring hover:-translate-y-2 border-border/50 bg-card/80 backdrop-blur-sm animate-slide-in"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
+              {certificates.map((cert, index) => <Card key={index} className="group hover:shadow-elegant transition-spring hover:-translate-y-2 border-border/50 bg-card/80 backdrop-blur-sm animate-slide-in" style={{
+              animationDelay: `${index * 0.2}s`
+            }}>
                   <div className="relative overflow-hidden">
-                    <img
-                      src={cert.image}
-                      alt={cert.title}
-                      className="w-full h-96 object-cover group-hover:scale-105 transition-spring cursor-pointer"
-                      onClick={() => window.open(cert.image, '_blank')}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-smooth"></div>
+                    <img src={cert.image} alt={cert.title} className="w-full h-96 object-cover group-hover:scale-105 transition-spring cursor-pointer" onClick={() => window.open(cert.image, '_blank')} />
+                    
                     <div className="absolute top-4 right-4">
                       <Badge className={getCategoryColor(cert.category)}>
                         {cert.category}
@@ -121,8 +112,7 @@ const Certificates = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
 
             {/* Additional Info */}
@@ -143,8 +133,6 @@ const Certificates = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Certificates;
