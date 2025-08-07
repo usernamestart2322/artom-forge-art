@@ -19,6 +19,13 @@ const AwardsSection = () => {
       description: "За весомый вклад в развитие российской экономики и достижение высоких экономических показателей",
       year: "2024",
       category: "Государственное признание"
+    },
+    {
+      image: "/lovable-uploads/29aac94d-0117-405e-bbd3-12fe0e3ee844.png",
+      title: "Лидер отрасли России 2020",
+      description: "За весомый вклад в развитие российской экономики, добросовестную уплату налогов, достижение высоких экономических показателей",
+      year: "2020",
+      category: "Государственное признание"
     }
   ];
 
@@ -38,7 +45,7 @@ const AwardsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {awards.map((award, index) => (
             <Card 
               key={index}
