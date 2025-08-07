@@ -15,7 +15,7 @@ const HeroSection = () => {
           alt="Производство АРТОМ"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
+        
       </div>
 
       {/* Content */}
