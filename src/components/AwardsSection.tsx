@@ -8,16 +8,16 @@ const AwardsSection = () => {
   const awards = [
     {
       image: awardImage,
-      title: "Лидер отрасли 2024",
+      title: "Лидер отрасли 2020, 2024",
       description: "Всероссийский бизнес-рейтинг",
-      year: "2024",
+      year: "2020, 2024",
       category: "Отраслевое лидерство"
     },
     {
       image: certificateImage,
-      title: "Национальный сертификат - Лидер отрасли 2024",
+      title: "Национальный сертификат - Лидер отрасли 2020, 2024",
       description: "За весомый вклад в развитие российской экономики и достижение высоких экономических показателей",
-      year: "2024", 
+      year: "2020, 2024",
       category: "Государственное признание"
     }
   ];
@@ -87,7 +87,7 @@ const AwardsSection = () => {
         {/* Achievement Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
           {[
-            { number: "2024", label: "Год признания лидером отрасли" },
+            { number: "2020, 2024", label: "Годы признания лидером отрасли" },
             { number: "№1", label: "В рейтинге предприятий отрасли" },
             { number: "30", label: "лет безупречной работы" }
           ].map((stat, index) => (

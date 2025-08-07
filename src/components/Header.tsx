@@ -31,15 +31,15 @@ const Header = () => {
               <div>
                 <h1 className="text-xl font-bold text-foreground">АРТОМ</h1>
                 <p className="text-xs text-muted-foreground leading-tight">
-                  Производство заготовок лопаток
+                  Производство штампованных заготовок лопаток
                 </p>
               </div>
             </div>
             
             {/* Contact Info */}
             <div className="hidden xl:block text-xs text-muted-foreground space-y-1">
-              <div>Россия, город Омск</div>
-              <div>ул. Богдана Хмельницкого 188, кв. 2</div>
+              <div>Россия, г.Омск, 644021 ул. Б.Хмельницкого, дом 188, помещ. 3П</div>
+              <div>Тел: 8(3812) 46-61-35</div>
               <div>ooo.artom@mail.ru | http://artom55.ru</div>
             </div>
           </div>

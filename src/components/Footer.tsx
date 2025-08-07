@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-bold">АРТОМ</h3>
-                <p className="text-white/80 text-sm">Производство заготовок лопаток</p>
+                <p className="text-white/80 text-sm">Производство штампованных заготовок лопаток</p>
               </div>
             </div>
             <p className="text-white/90 leading-relaxed">
@@ -34,8 +34,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary-light mt-1" />
                 <span className="text-white/90">
-                  Россия, город Омск<br />
-                  ул. Богдана Хмельницкого 188, кв. 2
+                  Россия, г.Омск, 644021 ул. Б.Хмельницкого, дом 188, помещ. 3П<br />
+                  Тел: 8(3812) 46-61-35
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -78,7 +78,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 mt-12 pt-8 text-center">
           <p className="text-white/70">
-            © 2024 ООО «АРТОМ». Все права защищены.
+            © 2025 ООО «АРТОМ». Все права защищены.
           </p>
         </div>
       </div>
