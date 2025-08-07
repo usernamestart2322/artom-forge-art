@@ -18,13 +18,6 @@ const Certificates = () => {
     validUntil: "08 ноября 2028 г.",
     standard: "ГОСТ ИСО/МЭК 17025-2019",
     category: "Аккредитация"
-  }, {
-    image: "/lovable-uploads/43b977b8-3ce6-450e-aaf5-e4d88a73bb28.png",
-    title: "Национальный сертификат - Лидер отрасли России 2020",
-    description: "За весомый вклад в развитие российской экономики, добросовестную уплату налогов, достижение высоких экономических показателей",
-    validUntil: "Бессрочно",
-    standard: "ОКВЭД 25.50",
-    category: "Национальное признание"
   }];
   const getCategoryColor = (category: string) => {
     switch (category) {
