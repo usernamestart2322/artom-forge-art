@@ -1,20 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer id="contacts" className="bg-gradient-hero text-white py-16">
+  return <footer id="contacts" className="bg-gradient-hero text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/8698ce12-657f-4f19-9f64-2a90b3e9926b.png" 
-                  alt="АРТОМ логотип" 
-                  className="w-full h-full object-contain"
-                />
+                <img src="/lovable-uploads/8698ce12-657f-4f19-9f64-2a90b3e9926b.png" alt="АРТОМ логотип" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold">АРТОМ</h3>
@@ -38,7 +32,7 @@ const Footer = () => {
                   <MapPin className="w-5 h-5 text-primary-light mt-1" />
                   <div className="text-white/90">
                     <div>Россия, г. Омск, 644021 ул. Б.Хмельницкого,</div>
-                    <div>дом 188, помещ. 311</div>
+                    <div>дом 188, помещ. 3П</div>
                     <div className="flex items-center space-x-2 mt-1">
                       <Phone className="w-4 h-4" />
                       <span>8(3812) 46-61-35</span>
@@ -104,26 +98,32 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-xl font-semibold mb-4">Быстрые ссылки</h4>
             <div className="grid grid-cols-2 gap-2">
-              {[
-                { name: "Главная", href: "#home" },
-                { name: "Производство", href: "#production" }, 
-                { name: "Руководство", href: "#management" },
-                { name: "Контакты", href: "#contacts" },
-                { name: "Мы в СМИ", href: "#media" },
-                { name: "Награды", href: "#awards" }
-              ].map((link, index) => (
-                <Button 
-                  key={index}
-                  variant="ghost" 
-                  className="justify-start text-white/80 hover:text-white hover:bg-white/10 p-2 h-auto"
-                  onClick={() => {
-                    const element = document.querySelector(link.href);
-                    element?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
+              {[{
+              name: "Главная",
+              href: "#home"
+            }, {
+              name: "Производство",
+              href: "#production"
+            }, {
+              name: "Руководство",
+              href: "#management"
+            }, {
+              name: "Контакты",
+              href: "#contacts"
+            }, {
+              name: "Мы в СМИ",
+              href: "#media"
+            }, {
+              name: "Награды",
+              href: "#awards"
+            }].map((link, index) => <Button key={index} variant="ghost" className="justify-start text-white/80 hover:text-white hover:bg-white/10 p-2 h-auto" onClick={() => {
+              const element = document.querySelector(link.href);
+              element?.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }}>
                   {link.name}
-                </Button>
-              ))}
+                </Button>)}
             </div>
           </div>
         </div>
@@ -134,8 +134,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
