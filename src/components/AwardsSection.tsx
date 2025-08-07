@@ -45,7 +45,7 @@ const AwardsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {awards.map((award, index) => (
             <Card 
               key={index}
@@ -92,26 +92,12 @@ const AwardsSection = () => {
         </div>
 
         {/* Achievement Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
           {[
-            { 
-              number: "2020, 2024", 
-              label: "Годы признания лидером отрасли",
-              image: "/lovable-uploads/43b977b8-3ce6-450e-aaf5-e4d88a73bb28.png"
-            },
             { number: "№1", label: "В рейтинге предприятий отрасли" },
             { number: "30", label: "лет безупречной работы" }
           ].map((stat, index) => (
             <div key={index} className="text-center p-6 rounded-xl bg-gradient-subtle border border-border/30 hover:shadow-card transition-smooth">
-              {stat.image && (
-                <div className="mb-4 flex justify-center">
-                  <img 
-                    src={stat.image} 
-                    alt="Сертификат лидера отрасли" 
-                    className="w-16 h-16 object-contain rounded-lg"
-                  />
-                </div>
-              )}
               <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
               <div className="text-muted-foreground font-medium">{stat.label}</div>
             </div>
