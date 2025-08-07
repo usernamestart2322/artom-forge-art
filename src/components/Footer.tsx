@@ -30,20 +30,72 @@ const Footer = () => {
           {/* Contact Info */}
           <div className="space-y-6">
             <h4 className="text-xl font-semibold mb-4">Контактная информация</h4>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary-light mt-1" />
-                <span className="text-white/90">
-                  Россия, г.Омск, 644021 ул. Б.Хмельницкого, дом 188, помещ. 3П<br />
-                  Тел: 8(3812) 46-61-35
-                </span>
+            <div className="space-y-6">
+              {/* Юридический адрес */}
+              <div className="space-y-2">
+                <h5 className="text-lg font-medium text-primary-light">Юридический адрес:</h5>
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-5 h-5 text-primary-light mt-1" />
+                  <div className="text-white/90">
+                    <div>Россия, г. Омск, 644021 ул. Б.Хмельницкого,</div>
+                    <div>дом 188, помещ. 311</div>
+                    <div className="flex items-center space-x-2 mt-1">
+                      <Phone className="w-4 h-4" />
+                      <span>8(3812) 46-61-35</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary-light" />
-                <span className="text-white/90">ooo.artom@mail.ru</span>
+
+              {/* Адрес производства */}
+              <div className="space-y-2">
+                <h5 className="text-lg font-medium text-primary-light">Адрес производства:</h5>
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-5 h-5 text-primary-light mt-1" />
+                  <div className="text-white/90">
+                    <div>Россия, г.Омск, ул. 10 лет Октября, д. 219/2В</div>
+                    <div className="flex items-center space-x-2 mt-1">
+                      <Phone className="w-4 h-4" />
+                      <span>8(3812) 40-40-18</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-white/90">http://artom55.ru</span>
+
+              {/* Контакты руководства */}
+              <div className="space-y-3">
+                <h5 className="text-lg font-medium text-primary-light">Руководство:</h5>
+                
+                <div className="bg-white/5 p-3 rounded-lg">
+                  <div className="text-white/80 text-sm mb-1">По вопросам сотрудничества и размещения заказов:</div>
+                  <div className="text-white font-medium">Директор по производству</div>
+                  <div className="text-white">Рычков Денис Витальевич</div>
+                  <div className="flex items-center space-x-2 mt-1">
+                    <Phone className="w-4 h-4 text-primary-light" />
+                    <span className="text-white/90">8(904) 327-51-68</span>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 p-3 rounded-lg">
+                  <div className="text-white/80 text-sm mb-1">По вопросам материально-технического обеспечения:</div>
+                  <div className="text-white font-medium">Технический директор</div>
+                  <div className="text-white">Филимендиков Александр Николаевич</div>
+                  <div className="flex items-center space-x-2 mt-1">
+                    <Phone className="w-4 h-4 text-primary-light" />
+                    <span className="text-white/90">8(913) 601-96-50</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Email и сайт */}
+              <div className="space-y-2">
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-5 h-5 text-primary-light" />
+                  <span className="text-white/90">ooo.artom@mail.ru</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-white/90">Сайт: artom55.ru</span>
+                </div>
               </div>
             </div>
           </div>
