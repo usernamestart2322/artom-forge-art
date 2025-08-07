@@ -6,7 +6,7 @@ import { Calendar, ExternalLink, Newspaper } from "lucide-react";
 const MediaSection = () => {
   const mediaItems = [
     {
-      title: "АРТОМ получил звание 'Лидер отрасли 2020, 2024'",
+      title: "АРТОМ получил звание 'Лидер отрасли 2024'",
       description: "Компания АРТОМ признана лидером в области производства заготовок для авиационной промышленности по итогам всероссийского бизнес-рейтинга.",
       date: "15 октября 2024",
       source: "Промышленный вестник",
@@ -90,12 +90,26 @@ const MediaSection = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <ExternalLink className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-medium text-primary">{item.source}</span>
+                    <span 
+                      className="text-sm font-medium text-primary cursor-pointer hover:underline"
+                      onClick={() => {
+                        if (item.category === "Сертификация") {
+                          window.location.href = "/certificates";
+                        }
+                      }}
+                    >
+                      {item.source}
+                    </span>
                   </div>
                   <Button 
                     variant="outline" 
                     size="sm"
                     className="hover:bg-primary hover:text-primary-foreground transition-smooth"
+                    onClick={() => {
+                      if (item.category === "Сертификация") {
+                        window.location.href = "/certificates";
+                      }
+                    }}
                   >
                     Читать полностью
                   </Button>
