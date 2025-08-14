@@ -65,8 +65,8 @@ const Footer = () => {
                   <div className="text-white font-medium">Директор по производству</div>
                   <div className="text-white">Рычков Денис Витальевич</div>
                   <div className="flex items-center space-x-2 mt-1">
-                    <Phone className="w-4 h-4 text-primary-light" />
-                    <span className="text-white/90">8(904) 327-51-68</span>
+                    <Mail className="w-4 h-4 text-primary-light" />
+                    <span className="text-white/90">rdv1986@mail.ru</span>
                   </div>
                 </div>
 
@@ -75,8 +75,8 @@ const Footer = () => {
                   <div className="text-white font-medium">Технический директор</div>
                   <div className="text-white">Филимендиков Александр Николаевич</div>
                   <div className="flex items-center space-x-2 mt-1">
-                    <Phone className="w-4 h-4 text-primary-light" />
-                    <span className="text-white/90">8(913) 601-96-50</span>
+                    <Mail className="w-4 h-4 text-primary-light" />
+                    <span className="text-white/90">vaa37@mail.ru</span>
                   </div>
                 </div>
               </div>
