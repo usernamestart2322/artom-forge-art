@@ -7,8 +7,8 @@ WORKDIR /app
 # Копируем файлы зависимостей
 COPY package*.json ./
 
-# Устанавливаем зависимости
-RUN npm ci --only=production
+# Устанавливаем зависимости (включая devDependencies для сборки)
+RUN npm ci
 
 # Копируем исходный код
 COPY . .
@@ -20,21 +20,14 @@ RUN npm run build
 FROM nginx:alpine
 
 # Копируем собранные файлы
-COPY --from=builder /app/dist /var/www/artom55.ru/dist
+COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Копируем конфигурацию nginx
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Создаем пользователя для nginx
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
+# Копируем конфигурацию nginx для Docker
+COPY nginx-docker.conf /etc/nginx/conf.d/default.conf
 
 # Устанавливаем права доступа
-RUN chown -R nextjs:nodejs /var/www/artom55.ru
-RUN chmod -R 755 /var/www/artom55.ru
-
-# Переключаемся на пользователя nextjs
-USER nextjs
+RUN chown -R nginx:nginx /usr/share/nginx/html
+RUN chmod -R 755 /usr/share/nginx/html
 
 # Открываем порт
 EXPOSE 80
