@@ -35,8 +35,8 @@ const ManagementSection = () => {
                     <h3 className="text-2xl lg:text-3xl font-bold text-foreground leading-tight">
                       Елена Александровна
                     </h3>
-                    <h4 className="text-xl lg:text-2xl font-bold text-primary">
-                      ГОРБАЧЕВА
+                    <h4 className="text-xl lg:text-2xl font-bold text-foreground">
+                      Горбачева
                     </h4>
                     <p className="text-lg text-muted-foreground font-medium">
                       Генеральный директор ООО «АРТОМ»
